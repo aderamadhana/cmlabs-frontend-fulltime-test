@@ -1,38 +1,41 @@
-# cmlabs
+# Food App
 
-This template should help get you started developing with Vue 3 in Vite.
+Aplikasi katalog makanan berbasis **Vue 3 + Vite** untuk menelusuri data meal secara interaktif. Pengguna dapat mencari meal berdasarkan nama, huruf awal, ingredient, melihat daftar kategori dan ingredient, serta membuka halaman detail meal.
 
-## Recommended IDE Setup
+## Fitur Utama
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Search by meal name** untuk mencari meal berdasarkan nama lengkap atau sebagian kata.
+- **Browse by alphabet** A-Z untuk menampilkan meal berdasarkan huruf awal.
+- **Browse by category** untuk melihat meal per kategori.
+- **List ingredients** untuk menelusuri ingredient yang tersedia.
+- **Search by ingredient name** untuk mencari ingredient tertentu.
+- **Meal detail page** untuk melihat informasi detail dari setiap meal.
+- **Pagination** pada daftar hasil agar navigasi data lebih nyaman.
+- **Routing** dengan Vue Router untuk perpindahan antarhalaman.
+- **Service layer** terpisah untuk pengambilan data API.
 
-## Recommended Browser Setup
+## Teknologi yang Digunakan
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+Proyek ini menggunakan stack berikut dari `package.json`:
 
-## Customize configuration
+- **Vue 3**
+- **Vite**
+- **Vue Router**
+- **Axios**
+- **Bootstrap 5**
+- **Bootstrap Icons**
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Requirements
 
-## Project Setup
+- **Node.js**: `^20.19.0 || >=22.12.0`
+- **npm** sesuai instalasi Node.js
 
-```sh
-npm install
-```
+## Scripts
 
-### Compile and Hot-Reload for Development
+Script yang tersedia di project:
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
+```bash
+npm run dev      # menjalankan development server
+npm run build    # build untuk production
+npm run preview  # preview hasil build production
 ```
