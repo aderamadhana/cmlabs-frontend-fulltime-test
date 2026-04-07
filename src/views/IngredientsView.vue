@@ -23,7 +23,10 @@
             <div class="filter-panel">
               <div class="row g-3">
                 <div class="col-12">
-                  <label for="ingredient-search" class="filter-label">
+                  <label
+                    for="ingredient-search"
+                    class="filter-label"
+                  >
                     Search ingredient
                   </label>
 
@@ -40,7 +43,10 @@
                 </div>
 
                 <div class="col-12 col-md-6">
-                  <label for="per-page" class="filter-label">
+                  <label
+                    for="per-page"
+                    class="filter-label"
+                  >
                     Items per page
                   </label>
 
@@ -83,18 +89,30 @@
           </div>
         </div>
 
-        <div v-if="loading" class="state-box text-center">
-          <div class="spinner-border custom-spinner mb-3" role="status"></div>
+        <div
+          v-if="loading"
+          class="state-box text-center"
+        >
+          <div
+            class="spinner-border custom-spinner mb-3"
+            role="status"
+          ></div>
           <p class="state-text mb-0">Loading ingredients...</p>
         </div>
 
-        <div v-else-if="error" class="state-box state-error text-center">
+        <div
+          v-else-if="error"
+          class="state-box state-error text-center"
+        >
           <i class="bi bi-exclamation-circle mb-3"></i>
           <p class="mb-0">{{ error }}</p>
         </div>
 
         <div v-else>
-          <div v-if="paginatedIngredients.length" class="row g-4">
+          <div
+            v-if="paginatedIngredients.length"
+            class="row g-4"
+          >
             <div
               v-for="item in paginatedIngredients"
               :key="item.idIngredient"
@@ -104,11 +122,15 @@
                 :name="item.strIngredient"
                 :image="item.strThumb"
                 :description="item.strDescription"
+                @click="goToDetail(item.strIngredient)"
               />
             </div>
           </div>
 
-          <div v-else class="state-box text-center">
+          <div
+            v-else
+            class="state-box text-center"
+          >
             <i class="bi bi-search mb-3"></i>
             <h3>No ingredients found</h3>
             <p class="mb-0">
@@ -122,8 +144,14 @@
             aria-label="Ingredients pagination"
           >
             <ul class="pagination custom-pagination mb-0">
-              <li class="page-item" :class="{ disabled: page === 1 }">
-                <button class="page-link" @click="changePage(page - 1)">
+              <li
+                class="page-item"
+                :class="{ disabled: page === 1 }"
+              >
+                <button
+                  class="page-link"
+                  @click="changePage(page - 1)"
+                >
                   <i class="bi bi-chevron-left"></i>
                 </button>
               </li>
@@ -134,13 +162,22 @@
                 class="page-item"
                 :class="{ active: page === p }"
               >
-                <button class="page-link" @click="changePage(p)">
+                <button
+                  class="page-link"
+                  @click="changePage(p)"
+                >
                   {{ p }}
                 </button>
               </li>
 
-              <li class="page-item" :class="{ disabled: page === totalPages }">
-                <button class="page-link" @click="changePage(page + 1)">
+              <li
+                class="page-item"
+                :class="{ disabled: page === totalPages }"
+              >
+                <button
+                  class="page-link"
+                  @click="changePage(page + 1)"
+                >
                   <i class="bi bi-chevron-right"></i>
                 </button>
               </li>
@@ -234,6 +271,12 @@ export default {
       } finally {
         this.loading = false;
       }
+    },
+    goToDetail(name) {
+      this.$router.push({
+        name: "ingredient-detail",
+        params: { name },
+      });
     },
     changePage(p) {
       if (p < 1 || p > this.totalPages) return;

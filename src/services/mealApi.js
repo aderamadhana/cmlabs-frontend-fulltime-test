@@ -42,14 +42,24 @@ export const searchFoodsByMealName = async (name) => {
 };
 
 export const getFoodCategories = async () => {
-  const { data } = await api.get("/list.php?c=list");
-  return data.meals || [];
+  const { data } = await api.get("/categories.php");
+  return data.categories || [];
 };
 
 export const getFoodsByCategory = async (categoryName) => {
   const { data } = await api.get("/filter.php", {
     params: {
       c: categoryName,
+    },
+  });
+
+  return data.meals || [];
+};
+
+export const getFoodsByIngredients = async (ingredientName) => {
+  const { data } = await api.get("/filter.php", {
+    params: {
+      i: ingredientName,
     },
   });
 

@@ -20,12 +20,18 @@
               </p>
 
               <div class="hero-actions">
-                <router-link to="/foods" class="btn btn-dark-clean">
+                <router-link
+                  to="/foods"
+                  class="btn btn-dark-clean"
+                >
                   <i class="bi bi-search me-2"></i>
                   Explore Foods
                 </router-link>
 
-                <router-link to="/ingredients" class="btn btn-light-clean">
+                <router-link
+                  to="/ingredients"
+                  class="btn btn-light-clean"
+                >
                   <i class="bi bi-basket2 me-2"></i>
                   Browse Ingredients
                 </router-link>
@@ -113,7 +119,10 @@
             <h2>What you can browse</h2>
           </div>
 
-          <router-link to="/foods" class="section-link">
+          <router-link
+            to="/foods"
+            class="section-link"
+          >
             View all foods
             <i class="bi bi-arrow-right ms-2"></i>
           </router-link>
@@ -130,7 +139,10 @@
                 Browse meal data in a more readable layout with stronger content
                 focus and better structure.
               </p>
-              <router-link to="/foods" class="preview-link">
+              <router-link
+                to="/foods"
+                class="preview-link"
+              >
                 Explore foods
                 <i class="bi bi-arrow-up-right ms-2"></i>
               </router-link>
@@ -147,7 +159,10 @@
                 See ingredients in a cleaner browsing experience without noisy
                 UI elements getting in the way.
               </p>
-              <router-link to="/ingredients" class="preview-link">
+              <router-link
+                to="/ingredients"
+                class="preview-link"
+              >
                 Browse ingredients
                 <i class="bi bi-arrow-up-right ms-2"></i>
               </router-link>
@@ -164,7 +179,10 @@
                 Group meals into clearer sections so users know where to start
                 instead of facing an empty landing area.
               </p>
-              <router-link to="/foods" class="preview-link">
+              <router-link
+                to="/foods"
+                class="preview-link"
+              >
                 See categories
                 <i class="bi bi-arrow-up-right ms-2"></i>
               </router-link>

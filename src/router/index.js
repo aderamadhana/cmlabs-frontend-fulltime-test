@@ -5,6 +5,7 @@ import FoodsView from "../views/FoodsView.vue";
 import CategoryView from "../views/CategoryView.vue";
 import IngredientsView from "../views/IngredientsView.vue";
 import MealDetailView from "../views/MealDetailView.vue";
+import IngredientDetailView from "../views/IngredientDetailView.vue";
 
 const routes = [
   { path: "/", name: "home", component: HomeView },
@@ -14,6 +15,11 @@ const routes = [
     path: "/foods/detail/:id",
     name: "meal-detail",
     component: MealDetailView,
+  },
+  {
+    path: "/ingredients/:name",
+    name: "ingredient-detail",
+    component: IngredientDetailView,
   },
   { path: "/ingredients", name: "ingredients", component: IngredientsView },
 ];
