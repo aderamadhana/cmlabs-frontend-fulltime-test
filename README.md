@@ -35,6 +35,7 @@ Proyek ini menggunakan stack berikut dari `package.json`:
 Script yang tersedia di project:
 
 ```bash
+npm install      # install dependencies
 npm run dev      # menjalankan development server
 npm run build    # build untuk production
 npm run preview  # preview hasil build production
