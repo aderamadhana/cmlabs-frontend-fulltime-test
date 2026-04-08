@@ -30,15 +30,14 @@ Proyek ini menggunakan stack berikut dari `package.json`:
 - **Node.js**: `^20.19.0 || >=22.12.0`
 - **npm** sesuai instalasi Node.js
 
-## Scripts
+## Instalasi
 
-Script yang tersedia di project:
+git clone https://github.com/aderamadhana/cmlabs-frontend-fulltime-test.git
+cd your_folder_clone_repo_name
 
 ```bash
 npm install      # install dependencies
 npm run dev      # menjalankan development server
-npm run build    # build untuk production
-npm run preview  # preview hasil build production
 ```
 
 ## Screenshots
