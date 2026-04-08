@@ -19,9 +19,9 @@
 
       <div class="col-md-7">
         <p class="mb-2">
-          <router-link to="/foods" class="back-link">
-            ← Back to meals
-          </router-link>
+          <button type="button" class="back-link" @click="goBack">
+            ← Back to previous page
+          </button>
         </p>
 
         <h1 class="mb-3">{{ meal.strMeal }}</h1>
@@ -139,6 +139,14 @@ export default {
         this.loading = false;
       }
     },
+
+    goBack() {
+      if (window.history.length > 1) {
+        this.$router.back();
+      } else {
+        this.$router.push("/foods");
+      }
+    },
   },
   mounted() {
     this.fetchMealDetail();
@@ -155,17 +163,6 @@ export default {
 .meal-detail {
   max-width: 1100px;
 }
-
-.back-link {
-  color: #b06a3c;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
 .instructions {
   white-space: pre-line;
   line-height: 1.8;
@@ -185,5 +182,42 @@ export default {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.back-link {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: #6c655f;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-link:hover {
+  color: #b06a3c;
+  transform: translateX(-2px);
+}
+
+.back-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.back-link:focus-visible {
+  outline: 2px solid rgba(176, 106, 60, 0.25);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.back-link:active {
+  transform: translateX(0);
 }
 </style>

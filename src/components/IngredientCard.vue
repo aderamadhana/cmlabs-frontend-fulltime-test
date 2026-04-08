@@ -16,12 +16,12 @@
         {{ shortDescription }}
       </p>
 
-      <!-- <div class="ingredient-footer">
-        <span class="ingredient-link">
+      <div class="ingredient-footer">
+        <router-link :to="`/ingredients/${name}`" class="ingredient-link">
           Explore ingredient
           <i class="bi bi-arrow-up-right ms-2"></i>
-        </span>
-      </div> -->
+        </router-link>
+      </div>
     </div>
   </article>
 </template>
@@ -131,9 +131,14 @@ export default {
   font-weight: 600;
   display: inline-flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .ingredient-link i {
   color: #b06a3c;
+}
+
+.ingredient-link:hover {
+  text-decoration: underline;
 }
 </style>
