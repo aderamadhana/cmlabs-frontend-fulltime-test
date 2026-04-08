@@ -32,10 +32,10 @@ Proyek ini menggunakan stack berikut dari `package.json`:
 
 ## Instalasi
 
+```bash
 git clone https://github.com/aderamadhana/cmlabs-frontend-fulltime-test.git
 cd your_folder_clone_repo_name
 
-```bash
 npm install      # install dependencies
 npm run dev      # menjalankan development server
 ```
