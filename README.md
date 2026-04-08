@@ -40,3 +40,29 @@ npm run dev      # menjalankan development server
 npm run build    # build untuk production
 npm run preview  # preview hasil build production
 ```
+
+## Screenshots
+
+### Home Page
+
+![Home Page](docs/screenshots/home.png)
+
+### Meals Page
+
+![Meals Page](docs/screenshots/foods.png)
+
+### Ingredients Page
+
+![Ingredients Page](docs/screenshots/ingredients.png)
+
+### Meal Detail Page
+
+![Meal Detail Page](docs/screenshots/detail_meal.png)
+
+### Food by Category
+
+![Food by Category](docs/screenshots/list_food_by_category.png)
+
+### Meal by Ingredients
+
+![Meal by Ingredients](docs/screenshots/list_meal_by_ingredients.png)
